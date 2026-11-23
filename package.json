@@ -1,0 +1,13 @@
+{
+  "name": "simple-nodejs-website",
+  "version": "1.0.0",
+  "description": "A modern, responsive, zero-dependency Node.js website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["nodejs", "website", "javascript", "clean-ui"],
+  "author": "",
+  "license": "MIT"
+}

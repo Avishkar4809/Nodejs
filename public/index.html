@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node.js Simple Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="theme-dark">
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <span class="logo-icon">🟢</span>
+        <span class="logo-text">Node<b>Web</b></span>
+      </div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#system">Server Info</a>
+        <a href="#interactive">Guestbook</a>
+      </nav>
+      <button id="themeToggleBtn" class="btn btn-outline" title="Toggle Theme">
+        <span id="themeIcon">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="badge">Node.js Powered</div>
+      <h1 class="hero-title">Simple, Clean & Fast<br><span class="gradient-text">Node.js Web App</span></h1>
+      <p class="hero-subtitle">
+        A lightweight website built directly on Node.js. High-performance, zero external library bloat, and modern responsive design.
+      </p>
+      <div class="hero-actions">
+        <a href="#interactive" class="btn btn-primary">Try Live Features</a>
+        <a href="#system" class="btn btn-secondary">Check Server Status</a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+      <div class="section-header">
+        <h2>Built for Simplicity</h2>
+        <p>Everything you need for a modern full-stack Node.js project.</p>
+      </div>
+
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Native Node.js HTTP</h3>
+          <p>Powered by Node's built-in HTTP engine for maximum startup speed and minimal memory footprint.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔌</div>
+          <h3>REST API Built-In</h3>
+          <p>Includes complete JSON endpoints for live system statistics and dynamic message interactions.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎨</div>
+          <h3>Modern Responsive UI</h3>
+          <p>Crafted with clean CSS variables, smooth transitions, and Dark/Light theme switching.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Server Status Section -->
+    <section id="system" class="section">
+      <div class="section-header">
+        <h2>Live Server Diagnostics</h2>
+        <p>Real-time metrics queried from the Node.js backend.</p>
+      </div>
+
+      <div class="system-card">
+        <div class="system-header">
+          <div class="status-indicator">
+            <span class="pulse-dot"></span>
+            <span id="statusLabel">Checking server...</span>
+          </div>
+          <button id="refreshStatsBtn" class="btn btn-sm">Refresh Stats</button>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <span class="metric-label">Node Version</span>
+            <span class="metric-value font-mono" id="nodeVer">-</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-label">Platform</span>
+            <span class="metric-value font-mono" id="platform">-</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-label">Server Uptime</span>
+            <span class="metric-value font-mono" id="uptime">-</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-label">Memory Usage</span>
+            <span class="metric-value font-mono" id="memory">-</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Section: Live Messages -->
+    <section id="interactive" class="section">
+      <div class="section-header">
+        <h2>Interactive Message Board</h2>
+        <p>Post a live note. Demonstrates instant front-to-back communication with the Node.js API.</p>
+      </div>
+
+      <div class="interactive-container">
+        <form id="messageForm" class="message-form">
+          <div class="form-row">
+            <input type="text" id="authorInput" placeholder="Your Name (e.g. Alex)" maxlength="30" required>
+            <input type="text" id="messageInput" placeholder="Write a short message or note..." maxlength="120" required>
+            <button type="submit" class="btn btn-primary">Post Message</button>
+          </div>
+        </form>
+
+        <div id="messagesList" class="messages-list">
+          <div class="loading-spinner">Loading messages...</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p>© 2026 Simple Node.js Website. Powered by Node.js & HTML/CSS/JS.</p>
+      <div class="footer-links">
+        <a href="https://nodejs.org" target="_blank" rel="noopener">Node.js Docs</a>
+        <a href="#features">Top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
